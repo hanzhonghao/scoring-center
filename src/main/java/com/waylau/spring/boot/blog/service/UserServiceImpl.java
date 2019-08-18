@@ -12,9 +12,6 @@ import com.waylau.spring.boot.blog.repository.UserRepository;
 
 /**
  * 用户服务接口实现.
- *
- * @since 1.0.0 2017年5月29日
- * @author <a href="https://waylau.com">Way Lau</a> 
  */
 @Service
 public class UserServiceImpl implements UserService {

@@ -2,9 +2,6 @@ package com.waylau.spring.boot.blog.vo;
 
 /**
  * 返回对象.
- * 
- * @since 1.0.0 2017年5月29日
- * @author <a href="https://waylau.com">Way Lau</a> 
  */
 public class Response {
 	
