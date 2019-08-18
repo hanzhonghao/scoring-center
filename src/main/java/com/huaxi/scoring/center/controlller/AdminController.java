@@ -1,15 +1,14 @@
-package com.waylau.spring.boot.blog.controlller;
+package com.huaxi.scoring.center.controlller;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.huaxi.scoring.center.vo.Menu;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
-import com.waylau.spring.boot.blog.vo.Menu;
 
 /**
  * 后台管理控制器.

@@ -1,4 +1,4 @@
-package com.waylau.spring.boot.blog.vo;
+package com.huaxi.scoring.center.vo;
 
 /**
  * 返回对象.

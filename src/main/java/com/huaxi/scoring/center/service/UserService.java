@@ -1,9 +1,9 @@
-package com.waylau.spring.boot.blog.service;
+package com.huaxi.scoring.center.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import com.waylau.spring.boot.blog.domain.User;
+import com.huaxi.scoring.center.domain.User;
 
 /**
  * 用户服务接口.

@@ -1,4 +1,4 @@
-package com.waylau.spring.boot.blog.service;
+package com.huaxi.scoring.center.service;
 
 import javax.transaction.Transactional;
 
@@ -7,8 +7,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.waylau.spring.boot.blog.domain.User;
-import com.waylau.spring.boot.blog.repository.UserRepository;
+import com.huaxi.scoring.center.domain.User;
+import com.huaxi.scoring.center.repository.UserRepository;
 
 /**
  * 用户服务接口实现.

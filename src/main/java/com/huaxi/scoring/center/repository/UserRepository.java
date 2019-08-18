@@ -1,10 +1,10 @@
-package com.waylau.spring.boot.blog.repository;
+package com.huaxi.scoring.center.repository;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.waylau.spring.boot.blog.domain.User;
+import com.huaxi.scoring.center.domain.User;
 
 /**
  * User Repository 接口.

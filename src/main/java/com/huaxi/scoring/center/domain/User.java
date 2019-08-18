@@ -1,4 +1,4 @@
-package com.waylau.spring.boot.blog.domain;
+package com.huaxi.scoring.center.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

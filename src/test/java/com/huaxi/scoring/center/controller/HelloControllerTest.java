@@ -1,4 +1,4 @@
-package com.waylau.spring.boot.blog.controller;
+package com.huaxi.scoring.center.controller;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

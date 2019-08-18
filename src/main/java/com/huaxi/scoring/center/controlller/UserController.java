@@ -1,4 +1,4 @@
-package com.waylau.spring.boot.blog.controlller;
+package com.huaxi.scoring.center.controlller;
 
 import java.util.List;
 
@@ -19,10 +19,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.waylau.spring.boot.blog.domain.User;
-import com.waylau.spring.boot.blog.service.UserService;
-import com.waylau.spring.boot.blog.util.ConstraintViolationExceptionHandler;
-import com.waylau.spring.boot.blog.vo.Response;
+import com.huaxi.scoring.center.domain.User;
+import com.huaxi.scoring.center.service.UserService;
+import com.huaxi.scoring.center.util.ConstraintViolationExceptionHandler;
+import com.huaxi.scoring.center.vo.Response;
 
 /**
  * User 控制器.

@@ -1,4 +1,4 @@
-package com.waylau.spring.boot.blog.controlller;
+package com.huaxi.scoring.center.controlller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

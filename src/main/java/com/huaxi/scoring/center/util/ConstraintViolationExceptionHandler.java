@@ -1,4 +1,4 @@
-package com.waylau.spring.boot.blog.util;
+package com.huaxi.scoring.center.util;
 
 import java.util.ArrayList;
 import java.util.List;
