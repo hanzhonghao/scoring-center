@@ -26,9 +26,6 @@ import com.waylau.spring.boot.blog.vo.Response;
 
 /**
  * User 控制器.
- * 
- * @since 1.0.0 2017年4月29日
- * @author <a href="https://waylau.com">Way Lau</a> 
  */
 @RestController
 @RequestMapping("/users")

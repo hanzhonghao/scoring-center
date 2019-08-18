@@ -25,38 +25,4 @@ public class MainController {
 	public String root() {
 		return "redirect:/admins";
 	}
-	
-	@GetMapping("/index")
-	public String index() {
-		return "index";
-	}
-
-	@GetMapping("/login")
-	public String login() {
-		return "login";
-	}
-
-	@GetMapping("/login-error")
-	public String loginError(Model model) {
-		model.addAttribute("loginError", true);
-		model.addAttribute("errorMsg", "登陆失败，用户名或者密码错误！");
-		return "login";
-	}
-	
-	@GetMapping("/register")
-	public String register() {
-		return "register";
-	}
-	
-    /**
-     * 注册用户
-     * @param user
-     * @return
-     */
-    @PostMapping("/register")
-    public String registerUser(User user) {
-        userService.registerUser(user);
-        return "redirect:/login";
-    }
-
 }
