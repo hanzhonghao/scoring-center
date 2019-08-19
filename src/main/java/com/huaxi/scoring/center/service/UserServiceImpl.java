@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import com.huaxi.scoring.center.domain.User;
 import com.huaxi.scoring.center.repository.UserRepository;
 
+import java.util.Optional;
+
 /**
  * 用户服务接口实现.
  */
@@ -43,15 +45,15 @@ public class UserServiceImpl implements UserService {
 	@Transactional
 	@Override
 	public void removeUser(Long id) {
-		userRepository.delete(id);
+		userRepository.deleteById(id);
 	}
 
 	/* (non-Javadoc)
 	 * @see com.waylau.spring.boot.blog.service.UserService#getUserById(java.lang.Long)
 	 */
 	@Override
-	public User getUserById(Long id) {
-		return userRepository.findOne(id);
+	public Optional<User> getUserById(Long id) {
+		return userRepository.findById(id);
 	}
 
 	/* (non-Javadoc)

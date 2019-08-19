@@ -1,6 +1,7 @@
 package com.huaxi.scoring.center.controlller;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.ConstraintViolationException;
 
@@ -112,7 +113,8 @@ public class UserController {
      */
     @GetMapping(value = "edit/{id}")
     public ModelAndView modifyForm(@PathVariable("id") Long id, Model model) {
-        User user = userService.getUserById(id);
+        Optional<User> userOp = userService.getUserById(id);
+        User user = userOp.get();
         model.addAttribute("user", user);
         return new ModelAndView("users/edit", "userModel", model);
     }

@@ -12,11 +12,8 @@ import com.huaxi.scoring.center.service.UserService;
 @Controller
 public class MainController {
 	
-	@Autowired
-	private UserService userService;
-	
 	@GetMapping("/")
 	public String root() {
-		return "redirect:/admins";
+		return "redirect:admins";
 	}
 }

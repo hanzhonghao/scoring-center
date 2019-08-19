@@ -5,6 +5,8 @@ import org.springframework.data.domain.Pageable;
 
 import com.huaxi.scoring.center.domain.User;
 
+import java.util.Optional;
+
 /**
  * 用户服务接口.
  */
@@ -33,7 +35,7 @@ public interface UserService {
      * 根据id获取用户
      * @return
      */
-    User getUserById(Long id);
+    Optional<User> getUserById(Long id);
 
     /**
      * 根据用户名进行分页模糊查询
