@@ -1,9 +1,7 @@
 package com.huaxi.scoring.center.controlller;
 
 import com.huaxi.scoring.center.domain.Material;
-import com.huaxi.scoring.center.domain.User;
 import com.huaxi.scoring.center.service.MaterialService;
-import com.huaxi.scoring.center.service.UserService;
 import com.huaxi.scoring.center.util.ConstraintViolationExceptionHandler;
 import com.huaxi.scoring.center.vo.Response;
 import org.springframework.beans.factory.annotation.Autowired;

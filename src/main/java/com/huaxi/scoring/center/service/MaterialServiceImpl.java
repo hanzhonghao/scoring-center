@@ -1,9 +1,7 @@
 package com.huaxi.scoring.center.service;
 
 import com.huaxi.scoring.center.domain.Material;
-import com.huaxi.scoring.center.domain.User;
 import com.huaxi.scoring.center.repository.MaterialRepository;
-import com.huaxi.scoring.center.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,7 +1,6 @@
 package com.huaxi.scoring.center.repository;
 
 import com.huaxi.scoring.center.domain.Material;
-import com.huaxi.scoring.center.domain.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
