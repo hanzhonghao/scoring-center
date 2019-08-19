@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -50,6 +51,12 @@ public class MaterialServiceImpl implements MaterialService {
 		materialName = "%" + materialName + "%";
         Page<Material> material = materialRepository.findByMaterialNameLike(materialName, pageable);
         return material;
+	}
+
+	@Override
+	public List<Material> findAllMaterials() {
+		List<Material> materialList = materialRepository.findAll();
+		return materialList;
 	}
 
 }

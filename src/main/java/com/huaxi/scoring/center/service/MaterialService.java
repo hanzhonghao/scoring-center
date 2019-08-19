@@ -5,6 +5,7 @@ import com.huaxi.scoring.center.domain.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -42,4 +43,9 @@ public interface MaterialService {
      * @return
      */
     Page<Material> listUsersByMaterialNameLike(String material, Pageable pageable);
+
+    /**
+    * 查找所有材料
+    */
+    List<Material> findAllMaterials();
 }

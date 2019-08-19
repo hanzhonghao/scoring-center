@@ -108,4 +108,19 @@ $(function() {
              }
          });
     });
+
+    // 获取计算分数的界面
+    $("#calculateMaterial").click(function() {
+        $.ajax({
+            cache: false,
+            url: "/materials/calculate",
+            success: function(data){
+                $("#materialFormContainerForCalculate").html(data);
+            },
+            error : function(data) {
+                toastr.error("error!");
+            }
+
+        });
+    });
 });

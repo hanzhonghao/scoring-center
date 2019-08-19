@@ -6,12 +6,16 @@
 			   placeholder="输入材料名称进行搜索">
 		<span class="input-group-btn">
 			<button class="btn btn-secondary" type="button" id="searchNameBtn">
-				<i class="fa fa-search" aria-hidden="true"></i>
+				<i class="fa fa- search" aria-hidden="true"></i>
 			</button>
 		</span>
 		<a class="btn btn-primary" data-toggle="modal"
 				   data-target="#flipFlop" role="button" id="addMaterial">
 			<i class="fa fa-plus" aria-hidden="true"></i>
+		</a>
+		<a class="btn btn-primary" data-toggle="modal"
+		   data-target="#flipFlopForCalculate" role="button" id="calculateMaterial">
+			<i class="fa fa-gift" aria-hidden="true"></i>
 		</a>
 
 	</div>
@@ -77,6 +81,27 @@
 			<div class="modal-body" id="materialFormContainer"></div>
 			<div class="modal-footer">
 				<button class="btn btn-primary" data-dismiss="modal" id="submitEdit">提交</button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- The modal -->
+<div class="modal fade" id="flipFlopForCalculate" tabindex="-1" role="dialog"
+	 aria-labelledby="modalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="modalLabelForCalculate">分数汇总</h4>
+				<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+
+			</div>
+			<div class="modal-body" id="materialFormContainerForCalculate"></div>
+			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 			</div>
 		</div>

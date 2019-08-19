@@ -112,4 +112,22 @@ public class MaterialController {
         model.addAttribute("material", material);
         return new ModelAndView("materials/edit", "materialModel", model);
     }
+
+    /**
+     * 获取汇总分数的页面
+     *
+     * @param model
+     * @return
+     */
+    @GetMapping("/calculate")
+    public ModelAndView calculate(Model model) {
+        List<Material> allMaterials = materialService.findAllMaterials();
+        int calculatePoint = 0;
+        for (Material material:allMaterials){
+            int point = material.getPoint();
+            calculatePoint = calculatePoint + point;
+        }
+        model.addAttribute("points", calculatePoint);
+        return new ModelAndView("materials/calculate", "materialModel", model);
+    }
 }

@@ -1,0 +1,24 @@
+<div id="mainContainer" class="container">
+    <div id="mainContainerRepleace" class="row">
+        <div class="container">
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th data-field="point">材料总分数是: </th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr th:object="${materialModel}">
+                    <td th:text="${materialModel.points}">分数</td>
+                </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+
+</div>
