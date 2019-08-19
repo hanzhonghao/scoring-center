@@ -15,3 +15,20 @@ insert into user (email, name, password, username) values ('5935315y3vr235@qq.co
 insert into user (email, name, password, username) values ('59353ty5g13vr235@qq.com','hanzhonghao','1','hrtvao');
 insert into user (email, name, password, username) values ('5935tr313vr235@qq.com','hanzhonghao','1','hrvtyao');
 insert into user (email, name, password, username) values ('593531tr3vr235@qq.com','hanzhonghao','1','hrvfrgao');
+
+insert into material (material_name, material_desc,material_comment,point) values ('测试材料','hanzho材料描述测试','h5ao',55);
+insert into material (material_name, material_desc,material_comment,point) values ('测试材料m','hanzh材料描述测试o','h4ao',1);
+insert into material (material_name, material_desc,material_comment,point) values ('测试材料om','hanz材料描述测试ao','thao',66);
+insert into material (material_name, material_desc,material_comment,point) values ('测试材料com','han材料描述测试hao','hyao',99);
+insert into material (material_name, material_desc,material_comment,point) values ('测试材料om','hanz材料描述测试ao','hrao',66);
+insert into material (material_name, material_desc,material_comment,point) values ('测试材料m','hanzh材料描述测试o','haevo',66);
+insert into material (material_name, material_desc,material_comment,point) values ('测试材料om','hanz材料描述测试ao','hatro',66);
+insert into material (material_name, material_desc,material_comment,point) values ('测试材料com','han材料描述测试hao','hvtrao',66);
+insert into material (material_name, material_desc,material_comment,point) values ('测试材料com','han材料描述测试hao','hrtyuhvao',66);
+insert into material (material_name, material_desc,material_comment,point) values ('测试材料com','han材料描述测试hao','hryuvao',66);
+insert into material (material_name, material_desc,material_comment,point) values ('测试材料com','han材料描述测试hao','hrvnyao',66);
+insert into material (material_name, material_desc,material_comment,point) values ('测试材料com','han材料描述测试hao','hrtyrvao',66);
+insert into material (material_name, material_desc,material_comment,point) values ('测试材料.com','ha材料描述测试ghao','hegrvao',66);
+insert into material (material_name, material_desc,material_comment,point) values ('测试材料qq.com','材料描述测试onghao','hrtvao',66);
+insert into material (material_name, material_desc,material_comment,point) values ('测试材料.com','ha材料描述测试ghao','hrvtyao',66);
+insert into material (material_name, material_desc,material_comment,point) values ('测试材料.com','ha材料描述测试ghao','hrvfrgao',66);

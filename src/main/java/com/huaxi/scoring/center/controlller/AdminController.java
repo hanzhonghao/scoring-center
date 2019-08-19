@@ -23,9 +23,9 @@ public class AdminController {
      * @return
      */
     @GetMapping
-    public ModelAndView listUsers(Model model) {
+    public ModelAndView listMaterials(Model model) {
         List<Menu> list = new ArrayList<>();
-        list.add(new Menu("材料汇总统计", "/users"));
+        list.add(new Menu("材料汇总统计", "/materials"));
         model.addAttribute("list", list);
         return new ModelAndView("admins/index", "model", model);
     }

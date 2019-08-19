@@ -10,15 +10,15 @@ $(function() {
     var _pageSize; // 存储用于搜索
 
     // 根据用户名、页面索引、页面大小获取用户列表
-    function getUersByName(pageIndex, pageSize) {
+    function getMaterialByName(pageIndex, pageSize) {
          $.ajax({ 
-             url: "/users", 
+             url: "/materials",
              contentType : 'application/json',
              data:{
                  "async":true, 
                  "pageIndex":pageIndex,
                  "pageSize":pageSize,
-                 "name":$("#searchName").val()
+                 "materialName":$("#searchName").val()
              },
              success: function(data){
                  $("#mainContainer").html(data);
@@ -31,21 +31,21 @@ $(function() {
 
     // 分页
     $.tbpage("#mainContainer", function (pageIndex, pageSize) {
-        getUersByName(pageIndex, pageSize);
+        getMaterialByName(pageIndex, pageSize);
         _pageSize = pageSize;
     });
 
     // 搜索
     $("#searchNameBtn").click(function() {
-        getUersByName(0, _pageSize);
+        getMaterialByName(0, _pageSize);
     });
 
     // 获取添加用户的界面
-    $("#addUser").click(function() {
+    $("#addMaterial").click(function() {
         $.ajax({ 
-             url: "/users/add", 
+             url: "/materials/add",
              success: function(data){
-                 $("#userFormContainer").html(data);
+                 $("#materialFormContainer").html(data);
              },
              error : function(data) {
                  toastr.error("error!");
@@ -56,9 +56,9 @@ $(function() {
     // 获取编辑用户的界面
     $("#rightContainer").on("click",".blog-edit-user", function () { 
         $.ajax({ 
-             url: "/users/edit/" + $(this).attr("userId"), 
+             url: "/materials/edit/" + $(this).attr("materialId"),
              success: function(data){
-                 $("#userFormContainer").html(data);
+                 $("#materialFormContainer").html(data);
              },
              error : function() {
                  toastr.error("error!");
@@ -69,15 +69,15 @@ $(function() {
     // 提交变更后，清空表单
     $("#submitEdit").click(function() {
         $.ajax({ 
-             url: "/users", 
+             url: "/materials",
              type: 'POST',
-             data:$('#userForm').serialize(),
+             data:$('#materialForm').serialize(),
              success: function(data){
-                 $('#userForm')[0].reset();  
+                 $('#materialForm')[0].reset();
 
                  if (data.success) {
                      // 从新刷新主界面
-                     getUersByName(0, _pageSize);
+                     getMaterialByName(0, _pageSize);
                  } else {
                      toastr.error(data.message);
                  }
@@ -93,12 +93,12 @@ $(function() {
     $("#rightContainer").on("click",".blog-delete-user", function () { 
 
         $.ajax({ 
-             url: "/users/" + $(this).attr("userId") , 
+             url: "/materials/" + $(this).attr("materialId") ,
              type: 'DELETE', 
              success: function(data){
                  if (data.success) {
                      // 从新刷新主界面
-                     getUersByName(0, _pageSize);
+                     getMaterialByName(0, _pageSize);
                  } else {
                      toastr.error(data.message);
                  }
