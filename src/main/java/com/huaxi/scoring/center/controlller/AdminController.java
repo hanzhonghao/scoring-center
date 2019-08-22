@@ -26,7 +26,7 @@ public class AdminController {
     public ModelAndView listMaterials(Model model) {
         List<Menu> list = new ArrayList<>();
 //        list.add(new Menu("材料汇总统计", "/materials"));
-        list.add(new Menu("竞标信息录入", "/materials"));
+        list.add(new Menu("竞标信息录入", "/inputmaterials"));
         list.add(new Menu("竞标信息打分", "/materials"));
         list.add(new Menu("打分结果汇总", "/materials"));
         list.add(new Menu("历史评标记录", "/materials"));
