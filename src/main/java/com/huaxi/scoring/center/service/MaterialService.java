@@ -19,7 +19,7 @@ public interface MaterialService {
     Material saveOrUpateMaterial(Material material);
 
     /**
-     * 注册用户
+     * 注册材料
      * @param material
      * @return
      */

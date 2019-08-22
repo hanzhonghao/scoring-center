@@ -3,18 +3,18 @@
 	<div class="input-group col-md-7 col-xl-6">
 
 		<input type="text" class="form-control" id="searchName"
-			   placeholder="输入材料名称进行搜索">
+			   placeholder="输入供应商名称进行搜索">
 		<span class="input-group-btn">
 			<button class="btn btn-secondary" type="button" id="searchNameBtn">
 				<i class="fa fa-search" aria-hidden="true"></i>
 			</button>
 		</span>
 		<a class="btn btn-primary" data-toggle="modal"
-				   data-target="#flipFlop" role="button" id="addMaterial">
+				   data-target="#flipFlop" role="button" id="addProject">
 			<i class="fa fa-plus" aria-hidden="true"></i>
 		</a>
 		<a class="btn btn-primary" data-toggle="modal"
-		   data-target="#flipFlopForCalculate" role="button" id="calculateMaterial">
+		   data-target="#flipFlopForRandom" role="button" id="random">
 			<i class="fa fa-gift" aria-hidden="true"></i>
 		</a>
 
@@ -28,7 +28,7 @@
 				<tr>
 					<th data-field="id">编号</th>
 					<th data-field="materialName">项目名称</th>
-					<th data-field="materialDesc">采购商名称</th>
+					<th data-field="materialDesc">供应商名称</th>
 					<th data-field="materialComment">采购员姓名</th>
 					<th data-field="materialComment">备注</th>
 					<th data-field="operation">操作</th>
@@ -37,20 +37,20 @@
 			</thead>
 			<tbody>
 
-				<tr th:each="material : ${materialModel.materialList}">
-					<td th:text="${material.id}">1</td>
-					<td th:text="${material.materialName}">HX</td>
-					<td th:text="${material.materialDesc}">HX</td>
-					<td th:text="${material.materialComment}">HX</td>
-					<td th:text="${material.point}">分数</td>
+				<tr th:each="project : ${projectModel.projectsList}">
+					<td th:text="${project.id}">1</td>
+					<td th:text="${project.projectName}">HX</td>
+					<td th:text="${project.purchaseName}">HX</td>
+					<td th:text="${project.buyer}">HX</td>
+					<td th:text="${project.comment}">hh</td>
 					<td>
 						<div>
 							<a class="blog-edit-user" data-toggle="modal"
 								data-target="#flipFlop" role="button"
-								data-th-attr="materialId=${material.id}"> <i
+								data-th-attr="projectId=${project.id}"> <i
 								class="fa fa-pencil-square-o" aria-hidden="true"></i>
 							</a> <a class="blog-delete-user" role="button"
-								data-th-attr="materialId=${material.id}"> <i class="fa fa-times"
+								data-th-attr="projectId=${project.id}"> <i class="fa fa-times"
 								aria-hidden="true"></i>
 							</a>
 						</div>
@@ -78,7 +78,7 @@
 				</button>
 
 			</div>
-			<div class="modal-body" id="materialFormContainer"></div>
+			<div class="modal-body" id="projectFormContainer"></div>
 			<div class="modal-footer">
 				<button class="btn btn-primary" data-dismiss="modal" id="submitEdit">提交</button>
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -88,19 +88,19 @@
 </div>
 
 <!-- The modal -->
-<div class="modal fade" id="flipFlopForCalculate" tabindex="-1" role="dialog"
+<div class="modal fade" id="flipFlopForRandom" tabindex="-1" role="dialog"
 	 aria-labelledby="modalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h4 class="modal-title" id="modalLabelForCalculate">分数汇总</h4>
+				<h4 class="modal-title" id="modalLabelForCalculate">随机抽取供应商名称</h4>
 				<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 
 			</div>
-			<div class="modal-body" id="materialFormContainerForCalculate"></div>
+			<div class="modal-body" id="projectFormContainerForRandom"></div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 			</div>
@@ -109,5 +109,5 @@
 </div>
 
 <!-- JavaScript -->
-<script src="../../js/materials/main.js" th:src="@{/js/materials/main.js}"></script>
+<script src="../../js/projects/main.js" th:src="@{/js/projects/main.js}"></script>
 
