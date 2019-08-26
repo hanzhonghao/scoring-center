@@ -48,4 +48,6 @@ public interface ProjectService {
     * 查找所有竞标项目
     */
     List<Project> findAllProjects();
+
+    Page<Project> findAllProjectsForPage(Pageable pageable);
 }

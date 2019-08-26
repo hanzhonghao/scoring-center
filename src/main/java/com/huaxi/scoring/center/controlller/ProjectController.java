@@ -1,10 +1,9 @@
 package com.huaxi.scoring.center.controlller;
 
-import com.huaxi.scoring.center.domain.Material;
 import com.huaxi.scoring.center.domain.Project;
-import com.huaxi.scoring.center.service.MaterialService;
 import com.huaxi.scoring.center.service.ProjectService;
 import com.huaxi.scoring.center.util.ConstraintViolationExceptionHandler;
+import com.huaxi.scoring.center.util.ListUtil;
 import com.huaxi.scoring.center.vo.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -121,13 +120,9 @@ public class ProjectController {
      */
     @GetMapping("/random")
     public ModelAndView random(Model model) {
-        List<Project> allMaterials = projectService.findAllProjects();
-        int calculatePoint = 0;
-        String random="";
-//        for (Project project:allMaterials){
-//            String purchaseName = project.getPurchaseName();
-//        }
-        model.addAttribute("random", random);
+        List<Project> allprojects = projectService.findAllProjects();
+        ListUtil.randomProjectName(allprojects);
+        model.addAttribute("frontlist", allprojects);
         return new ModelAndView("projects/random", "projectModel", model);
     }
 }

@@ -57,4 +57,10 @@ public class ProjectServiceImpl implements ProjectService {
 		return projectList;
 	}
 
+	@Override
+	public Page<Project> findAllProjectsForPage(Pageable pageable) {
+		Page<Project> projects = projectRepository.findAll(pageable);
+		return projects;
+	}
+
 }

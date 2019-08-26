@@ -5,19 +5,17 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th data-field="point">材料总分数是: </th>
+                    <th data-field="id">编号</th>
+                    <th data-field="projectname">供应商名称</th>
                 </tr>
                 </thead>
                 <tbody>
-
-                <tr th:object="${materialModel}">
-                    <td th:text="${materialModel.points}">分数</td>
+                <tr th:each="project : ${projectModel.frontlist}">
+                    <td th:text="${project.id}">编号</td>
+                    <td th:text="${project.projectName}">供应商名称</td>
                 </tr>
-
                 </tbody>
-
             </table>
-
         </div>
     </div>
 
