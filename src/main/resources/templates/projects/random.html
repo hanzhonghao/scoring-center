@@ -5,13 +5,13 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th data-field="id">编号</th>
+                    <th data-field="id">顺序</th>
                     <th data-field="projectname">供应商名称</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="project : ${projectModel.frontlist}">
-                    <td th:text="${project.id}">编号</td>
+                <tr th:each="project,status: ${projectModel.frontlist}">
+                    <td th:text="${status.count}">顺序</td>
                     <td th:text="${project.projectName}">供应商名称</td>
                 </tr>
                 </tbody>

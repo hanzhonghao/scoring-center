@@ -37,8 +37,8 @@
 			</thead>
 			<tbody>
 
-				<tr th:each="project : ${projectModel.projectsList}">
-					<td th:text="${project.id}">1</td>
+				<tr th:each="project,status: ${projectModel.projectsList}">
+					<td th:text="${status.count}">1</td>
 					<td th:text="${project.projectName}">HX</td>
 					<td th:text="${project.purchaseName}">HX</td>
 					<td th:text="${project.buyer}">HX</td>
@@ -108,6 +108,8 @@
 	</div>
 </div>
 
+<link rel="stylesheet" href="bootstrap-table.css">
+<script src="bootstrap-table.js"></script>
 <!-- JavaScript -->
 <script src="../../js/projects/main.js" th:src="@{/js/projects/main.js}"></script>
 
