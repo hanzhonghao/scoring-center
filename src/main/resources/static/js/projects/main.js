@@ -29,34 +29,9 @@ $(function() {
          });
     }
 
-    function getProjectByNameForTable(pageIndex, pageSize) {
-        $.ajax({
-            url: "/projects/table",
-            contentType : 'application/json',
-            data:{
-                "async":true,
-                "pageIndex":pageIndex,
-                "pageSize":pageSize,
-                "projectName":$("#searchName").val()
-            },
-            success: function(data){
-                $("#mainContainerRepleace").html(data);
-            },
-            error : function() {
-                toastr.error("error!");
-            }
-        });
-    }
-
     // 分页
     $.tbpage("#mainContainer", function (pageIndex, pageSize) {
         getProjectByName(pageIndex, pageSize);
-        _pageSize = pageSize;
-    });
-
-    // 表格分页
-    $.tbpage("#mainContainerRepleace", function (pageIndex, pageSize) {
-        getProjectByNameForTable(pageIndex, pageSize);
         _pageSize = pageSize;
     });
 
@@ -148,4 +123,18 @@ $(function() {
 
         });
     });
+
+    $("#print").click(function() {
+        $.ajax({
+            cache: false,
+            url: "/projects/print",
+            success: function(data){
+                $("#mainContainer").html(data);
+            },
+            error : function(data) {
+                toastr.error("error!");
+            }
+        });
+    });
+
 });

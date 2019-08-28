@@ -4,21 +4,53 @@
 		<input type="hidden" name="id" th:value="*{id}">
 
 		<div class="form-group ">
-			<label for="projectName" class="col-form-label">项目名称</label>
-			<input type="text" class="form-control" id="projectName" name="projectName"  th:value="*{projectName}" maxlength="50" placeholder="请输入项目">
+			<label for="projectName" class="col-form-label">参选公司</label>
+			<input type="text" class="form-control" id="projectName" name="projectName"  th:value="*{projectName}" maxlength="50" placeholder="请输入参选公司">
 
 		</div>
 		<div class="form-group">
-			<label for="purchaseName" class="col-form-label">供应商名称</label>
-			<input type="text" class="form-control" id="purchaseName" name="purchaseName" th:value="*{purchaseName}" maxlength="50" placeholder="请输入供应商名称">
+			<label for="origin" class="col-form-label">产地及品牌</label>
+			<input type="text" class="form-control" id="origin" name="origin" th:value="*{origin}" maxlength="50" placeholder="请输入产地及品牌">
 		</div>
 		<div class="form-group">
-			<label for="buyer" class="col-form-label">采购员姓名</label>
-			<input type="text" class="form-control" id="buyer" name="buyer" th:value="*{buyer}" maxlength="20" placeholder="请输入采购员姓名" >
+			<label for="type" class="col-form-label">规格型号</label>
+			<input type="text" class="form-control" id="type" name="type" th:value="*{type}" maxlength="20" placeholder="请输入规格型号" >
+		</div>
+		<div class="form-group">
+			<label for="price" class="col-form-label">报价</label>
+			<input type="number" class="form-control" id="price" name="price"  th:value="*{price}" placeholder="请输入报价" >
+		</div>
+		<div class="form-group">
+			<label for="fprice" class="col-form-label">最终报价</label>
+			<input type="number" class="form-control" id="fprice" name="fprice"  th:value="*{fprice}" placeholder="请输入最终报价" >
 		</div>
 		<div class="form-group">
 			<label for="comment" class="col-form-label">备注</label>
 			<input type="text" class="form-control" id="comment" name="comment"  th:value="*{comment}" placeholder="请输入备注" >
+		</div>
+		<div class="form-group">
+			<label for="date" class="col-form-label">时间</label>
+			<input type="date" class="form-control" id="date" name="date"  th:value="*{date}" placeholder="请输入时间" >
+		</div>
+		<div class="form-group">
+			<label for="location" class="col-form-label">地点</label>
+			<input type="text" class="form-control" id="location" name="location"  th:value="*{location}" placeholder="请输入地点" >
+		</div>
+		<div class="form-group">
+			<label for="recoder" class="col-form-label">记录人</label>
+			<input type="text" class="form-control" id="recoder" name="recoder"  th:value="*{recoder}" placeholder="请输入记录人" >
+		</div>
+		<div class="form-group">
+			<label for="reviewer" class="col-form-label">复核人</label>
+			<input type="text" class="form-control" id="reviewer" name="reviewer"  th:value="*{reviewer}" placeholder="请输入复核人" >
+		</div>
+		<div class="form-group">
+			<label for="responer" class="col-form-label">经办人</label>
+			<input type="text" class="form-control" id="responer" name="responer"  th:value="*{responer}" placeholder="请输入经办人" >
+		</div>
+		<div class="form-group">
+			<label for="bargain" class="col-form-label">议价内容</label>
+			<input type="text" class="form-control" id="bargain" name="bargain"  th:value="*{bargain}" placeholder="请输入议价内容" >
 		</div>
 
 	</form>

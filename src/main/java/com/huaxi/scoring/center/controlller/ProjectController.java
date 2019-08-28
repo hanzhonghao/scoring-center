@@ -59,7 +59,9 @@ public class ProjectController {
      */
     @GetMapping("/add")
     public ModelAndView createForm(Model model) {
-        model.addAttribute("project", new Project(null,null,null, null, null));
+        model.addAttribute("project",
+                new Project(null,null,null, null, 0, 0,
+                        null, null, null, null, null, null, null));
         return new ModelAndView("projects/add", "projectModel", model);
     }
 
@@ -124,5 +126,17 @@ public class ProjectController {
         ListUtil.randomProjectName(allprojects);
         model.addAttribute("frontlist", allprojects);
         return new ModelAndView("projects/random", "projectModel", model);
+    }
+
+    @GetMapping("/print")
+    public ModelAndView print(Model model) {
+        //TODO 根据日期获取列表
+        List<Project> allprojects = projectService.findAllProjects();
+        int size = allprojects.size()+1;
+        Project firstObj = allprojects.get(0);
+        model.addAttribute("allprojects", allprojects);
+        model.addAttribute("size", size);
+        model.addAttribute("firstObj", firstObj);
+        return new ModelAndView("projects/print", "projectModel", model);
     }
 }

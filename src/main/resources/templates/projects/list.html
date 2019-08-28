@@ -17,6 +17,10 @@
 		   data-target="#flipFlopForRandom" role="button" id="random">
 			<i class="fa fa-random" aria-hidden="true">随机抽取</i>
 		</a>
+		<a class="btn btn-primary" data-toggle="modal"
+		   data-target="#flipFlopForPrint" role="button" id="print">
+			<i class="fa fa-download" aria-hidden="true">打印登记表</i>
+		</a>
 
 	</div>
 </div>
@@ -27,10 +31,18 @@
 			<thead>
 				<tr>
 					<th data-field="id">编号</th>
-					<th data-field="materialName">项目名称</th>
-					<th data-field="materialDesc">供应商名称</th>
-					<th data-field="materialComment">采购员姓名</th>
-					<th data-field="materialComment">备注</th>
+					<th data-field="projectName">参选公司</th>
+					<th data-field="origin">产地及品牌</th>
+					<th data-field="type">规格型号</th>
+					<th data-field="price">报价</th>
+					<th data-field="fprice">最终报价</th>
+					<th data-field="comment">备注</th>
+					<th data-field="date">时间</th>
+					<th data-field="location">地点</th>
+					<th data-field="recoder">记录人</th>
+					<th data-field="reviewer">复核人</th>
+					<th data-field="responer">经办人</th>
+					<th data-field="bargain">议价内容</th>
 					<th data-field="operation">操作</th>
 
 				</tr>
@@ -40,9 +52,17 @@
 				<tr th:each="project,status: ${projectModel.projectsList}">
 					<td th:text="${status.count}">1</td>
 					<td th:text="${project.projectName}">HX</td>
-					<td th:text="${project.purchaseName}">HX</td>
-					<td th:text="${project.buyer}">HX</td>
+					<td th:text="${project.origin}">HX</td>
+					<td th:text="${project.type}">HX</td>
+					<td th:text="${project.price}">hh</td>
+					<td th:text="${project.fprice}">hh</td>
 					<td th:text="${project.comment}">hh</td>
+					<td th:text="${project.date}">hh</td>
+					<td th:text="${project.location}">hh</td>
+					<td th:text="${project.recoder}">hh</td>
+					<td th:text="${project.reviewer}">hh</td>
+					<td th:text="${project.responer}">hh</td>
+					<td th:text="${project.bargain}">hh</td>
 					<td>
 						<div>
 							<a class="blog-edit-user" data-toggle="modal"
