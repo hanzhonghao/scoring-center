@@ -1,6 +1,7 @@
 package com.huaxi.scoring.center.controlller;
 
 import com.huaxi.scoring.center.domain.Project;
+import com.huaxi.scoring.center.domain.Score;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,8 +19,7 @@ public class ScoreController {
     @GetMapping("/score")
     public ModelAndView createForm(Model model) {
         model.addAttribute("score",
-                new Project(null, null, null, null, 0, 0,
-                        null, null, null, null, null, null, null));
-        return new ModelAndView("score/add", "projectModel", model);
+                new Score(null,null,0,0,0,0,0));
+        return new ModelAndView("score/equipment", "scoreModel", model);
     }
 }
