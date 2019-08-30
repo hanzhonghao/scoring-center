@@ -23,5 +23,5 @@ public interface ProjectRepository extends JpaRepository<Project, Long>{
      * @param projectlName
      * @return
      */
-    Material findByProjectName(String projectlName);
+    Project findByProjectName(String projectlName);
 }

@@ -18,10 +18,10 @@ $(function() {
                  "async":true, 
                  "pageIndex":pageIndex,
                  "pageSize":pageSize,
-                 "projectName":$("#searchName").val()
+                 "projectName":""
              },
              success: function(data){
-                 $("#mainContainer1").html(data);
+                 $("#mainContainer").html(data);
              },
              error : function() {
                  toastr.error("error!");
@@ -30,7 +30,7 @@ $(function() {
     }
 
     // 分页
-    $.tbpage("#mainContainer1", function (pageIndex, pageSize) {
+    $.tbpage("#mainContainer", function (pageIndex, pageSize) {
         getProjectByName(pageIndex, pageSize);
         _pageSize = pageSize;
     });
@@ -42,7 +42,7 @@ $(function() {
 
     // 获取添加竞标项目的界面
     $("#addProject").click(function() {
-        $.ajax({ 
+        $.ajax({
              url: "/projects/add",
              success: function(data){
                  $("#projectFormContainer").html(data);
@@ -54,8 +54,8 @@ $(function() {
     });
 
     // 获取编辑竞标项目的界面
-    $("#rightContainer").on("click",".blog-edit-user", function () { 
-        $.ajax({ 
+    $("#rightContainer").on("click",".blog-edit-user", function () {
+        $.ajax({
              url: "/projects/edit/" + $(this).attr("projectId"),
              success: function(data){
                  $("#projectFormContainer").html(data);
@@ -68,7 +68,7 @@ $(function() {
 
     // 提交变更后，清空表单
     $("#submitEdit").click(function() {
-        $.ajax({ 
+        $.ajax({
              url: "/projects",
              type: 'POST',
              data:$('#projectForm').serialize(),
@@ -90,11 +90,11 @@ $(function() {
     });
 
     // 删除竞标项目
-    $("#rightContainer").on("click",".blog-delete-user", function () { 
+    $("#rightContainer").on("click",".blog-delete-user", function () {
 
-        $.ajax({ 
+        $.ajax({
              url: "/projects/" + $(this).attr("projectId") ,
-             type: 'DELETE', 
+             type: 'DELETE',
              success: function(data){
                  if (data.success) {
                      // 从新刷新主界面
@@ -109,25 +109,10 @@ $(function() {
          });
     });
 
-    // 获取随机供应商的界面
-    $("#random").click(function() {
-        $.ajax({
-            cache: false,
-            url: "/projects/random",
-            success: function(data){
-                $("#projectFormContainerForRandom").html(data);
-            },
-            error : function(data) {
-                toastr.error("error!");
-            }
-
-        });
-    });
-
     $("#print").click(function() {
         $.ajax({
             cache: false,
-            url: "/projects/print",
+            url: "/scores/print",
             success: function(data){
                 $("#mainContainer").html(data);
             },
